@@ -2,6 +2,9 @@ from flask import Flask, request, jsonify
 import os
 
 app = Flask(__name__)
+@app.route('/')
+def home():
+    return "✅ Backend is running on Render - Claude + ElevenLabs (Shadow Realm)"
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
